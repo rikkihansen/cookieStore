@@ -48,25 +48,81 @@ var washingtonSquare = {
         return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
  }
 
-var cookieArray = [];
 
 function cookiePerHour(store) {
+  var cookieArray = [];
   var cookieTotal = 0;
   for (var index = 0; index < 8; index++) {
     var cookiePurchases = Math.floor(store.customerPerHour() * store.avgCookieSale)
     cookieArray.push(cookiePurchases);
-    };
-  console.log(cookieArray);
+  };
+
   return cookieArray;
 }
 
 function addToUl() {
-var listItem = document.getElementById('cookie');
-for(var index = 0; index < cookieArray.length; index++) {
-  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+
+  var listItem = document.getElementById('cookie');
+  var cookieArray = cookiePerHour(pioneerSquare);
+  console.log('here', cookieArray);
+  var sum = 0;
+  for (var index = 0; index < cookieArray.length; index++) {
+    listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+    sum += cookieArray[index];
   }
+  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
 }
 
-cookiePerHour(pioneerSquare);
+function addToUlTwo() {
+var listItem = document.getElementById('cookieTwo');
+var cookieArray = cookiePerHour(portlandAirport);
+var sum = 0;
+for(var index = 0; index < cookieArray.length; index++) {
+  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+    sum += cookieArray[index];
+  }
+  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
+}
+
+function addToUlThree() {
+var listItem = document.getElementById('cookieThree');
+var cookieArray = cookiePerHour(washingtonSquare);
+var sum = 0;
+for(var index = 0; index < cookieArray.length; index++) {
+  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+    sum += cookieArray[index];
+  }
+  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
+}
+
+function addToUlFour() {
+var listItem = document.getElementById('cookieFour');
+var cookieArray = cookiePerHour(sellwood);
+var sum = 0;
+for(var index = 0; index < cookieArray.length; index++) {
+  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+  sum += cookieArray[index];
+  }
+  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
+}
+
+function addToUlFive() {
+var listItem = document.getElementById('cookieFive');
+var cookieArray = cookiePerHour(pearlDistrict);
+var sum = 0;
+for(var index = 0; index < cookieArray.length; index++) {
+  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+    sum += cookieArray[index];
+  }
+  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
+}
+
+
+
+var stores = [pioneerSquare, washingtonSquare, sellwood];
 
 addToUl();
+addToUlTwo();
+addToUlThree();
+addToUlFour();
+addToUlFive();
