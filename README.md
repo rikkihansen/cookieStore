@@ -16,4 +16,6 @@ Cookie Store!!
  I also made a variable called sum that would add up all the sales per hour to give you your daily total,
  I made sum = 0 then added it to the cookie array.
 
+ I made the styleguide for my page, but I am not totally sure if I have it done correctly..
+
  This assignment was definitely hard for me.
