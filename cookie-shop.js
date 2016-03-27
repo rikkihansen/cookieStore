@@ -1,4 +1,5 @@
 // cookie-shop Start
+// Store Objects
 var pioneerSquare = {
   minCustomer: 17,
   maxCustomer: 88,
@@ -62,7 +63,6 @@ function cookiePerHour(store) {
 }
 // adding all of the randomly generated numbers from the array to an unordered list for each location
 function addToUl() {
-
   var listItem = document.getElementById('cookie');
   var cookieArray = cookiePerHour(pioneerSquare);
   console.log(cookieArray);
@@ -119,7 +119,7 @@ for(var index = 0; index < cookieArray.length; index++) {
 }
 
 
-// calling 
+// calling
 var stores = [pioneerSquare, washingtonSquare, sellwood];
 
 addToUl();
