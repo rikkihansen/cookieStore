@@ -62,57 +62,20 @@ function cookiePerHour(store) {
   return cookieArray;
 }
 // adding all of the randomly generated numbers from the array to an unordered list for each location
-function addToUl() {
-  var listItem = document.getElementById('cookie');
-  var cookieArray = cookiePerHour(pioneerSquare);
+function addToUl(shop, elementId) {
+  var listItem = document.getElementById(elementId);
+  var cookieArray = cookiePerHour(shop);
   console.log(cookieArray);
   var sum = 0;
   for (var index = 0; index < cookieArray.length; index++) {
-    listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
-    sum += cookieArray[index];
-  }
-  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
-}
-
-function addToUlTwo() {
-var listItem = document.getElementById('cookieTwo');
-var cookieArray = cookiePerHour(portlandAirport);
-var sum = 0;
-for(var index = 0; index < cookieArray.length; index++) {
-  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
-    sum += cookieArray[index];
-  }
-  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
-}
-
-function addToUlThree() {
-var listItem = document.getElementById('cookieThree');
-var cookieArray = cookiePerHour(washingtonSquare);
-var sum = 0;
-for(var index = 0; index < cookieArray.length; index++) {
-  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
-    sum += cookieArray[index];
-  }
-  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
-}
-
-function addToUlFour() {
-var listItem = document.getElementById('cookieFour');
-var cookieArray = cookiePerHour(sellwood);
-var sum = 0;
-for(var index = 0; index < cookieArray.length; index++) {
-  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
-  sum += cookieArray[index];
-  }
-  listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
-}
-
-function addToUlFive() {
-var listItem = document.getElementById('cookieFive');
-var cookieArray = cookiePerHour(pearlDistrict);
-var sum = 0;
-for(var index = 0; index < cookieArray.length; index++) {
-  listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
+    if (index+10 > 12) {
+      listItem.innerHTML += "<li>" + (index-2) +" PM" + ": " +cookieArray[index] +"</li>";
+    } else if (index+10 == 12){
+      listItem.innerHTML += "<li>12 PM" + ": " +cookieArray[index] +"</li>";
+    }
+    else {
+      listItem.innerHTML += "<li>" + (index+10) +" AM" + ": " +cookieArray[index] +"</li>";
+    }
     sum += cookieArray[index];
   }
   listItem.innerHTML += "<li>" + "Total sales: " + sum + "</li>";
@@ -122,8 +85,8 @@ for(var index = 0; index < cookieArray.length; index++) {
 // calling
 var stores = [pioneerSquare, washingtonSquare, sellwood];
 
-addToUl();
-addToUlTwo();
-addToUlThree();
-addToUlFour();
-addToUlFive();
+addToUl(pioneerSquare, "cookie");
+addToUl(portlandAirport, "cookieTwo");
+addToUl(washingtonSquare, "cookieThree");
+addToUl(sellwood, "cookieFour");
+addToUl(pearlDistrict, "cookieFive");
