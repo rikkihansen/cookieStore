@@ -4,6 +4,7 @@ var pioneerSquare = {
   maxCustomer: 88,
   avgCookieSale: 5.2
 };
+//genterating random numbers using maxCustomer and minCustomer
  pioneerSquare.customerPerHour=function() {
      return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
  }
@@ -48,7 +49,7 @@ var washingtonSquare = {
         return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
  }
 
-
+// creating a function for the cookieArray using avgCookieSale and a for loop
 function cookiePerHour(store) {
   var cookieArray = [];
   var cookieTotal = 0;
@@ -59,12 +60,12 @@ function cookiePerHour(store) {
 
   return cookieArray;
 }
-
+// adding all of the randomly generated numbers from the array to an unordered list for each location
 function addToUl() {
 
   var listItem = document.getElementById('cookie');
   var cookieArray = cookiePerHour(pioneerSquare);
-  console.log('here', cookieArray);
+  console.log(cookieArray);
   var sum = 0;
   for (var index = 0; index < cookieArray.length; index++) {
     listItem.innerHTML += "<li>" + (index+10) +": " +cookieArray[index] +"</li>";
@@ -118,7 +119,7 @@ for(var index = 0; index < cookieArray.length; index++) {
 }
 
 
-
+// calling 
 var stores = [pioneerSquare, washingtonSquare, sellwood];
 
 addToUl();
