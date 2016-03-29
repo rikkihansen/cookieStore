@@ -119,7 +119,7 @@ for(var index = 0; index < cookieArray.length; index++) {
 }
 
 
-// calling 
+// calling
 var stores = [pioneerSquare, washingtonSquare, sellwood];
 
 addToUl();
