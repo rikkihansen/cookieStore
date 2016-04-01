@@ -46,3 +46,15 @@ a:hover {
   color: white;
   font-style: italic;
 }
+
+table {
+  border: solid black 5px;
+  width: 100%;
+}
+th, td, tr {
+  border: solid black 5px;
+  padding: 10px, 10px, 10px, 10px;
+}
+th {
+  width: 100%;
+}
