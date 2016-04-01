@@ -1,11 +1,11 @@
 // cookie-shop Start
 // Store Objects
-var Stores = function(minCustomer, maxCustomer, avgCookieSale, location, getElementById) {
+var Stores = function(minCustomer, maxCustomer, avgCookieSale, place, getElementId) {
    this.minCustomer= minCustomer;
    this.maxCustomer= maxCustomer;
    this.avgCookieSale= avgCookieSale;
-   this.location= location;
-   this.getElementById= getElementById;
+   this.place= place;
+   this.getElementId= getElementId;
    this.customerPerHour = function() {
     return Math.floor(Math.random() * (this.maxCustomer - this. minCustomer) + this.minCustomer);
   }
@@ -104,7 +104,7 @@ function addToUl(shop, elementId) {
 
 
 // calling
-var stores = [pioneerSquare, washingtonSquare, sellwood];
+//var stores = [pioneerSquare, washingtonSquare, sellwood];
 //for (var places = 0; places < Stores; index++)
 var places = new Array ();
 places.push(new Stores(17, 88, 5.2, "Pionner Square", "cookie"));
@@ -113,8 +113,8 @@ places.push(new Stores(11, 38, 1.2, "Washington Square", "cookieThree"));
 places.push(new Stores(20, 48, 3.3, "Sellwood", "cookieFour"));
 places.push(new Stores(3, 24, 2.6, "Pearl District", "cookieFive"));
 
-// addToUl(pioneerSquare, "cookie");
-// addToUl(portlandAirport, "cookieTwo");
-// addToUl(washingtonSquare, "cookieThree");
-// addToUl(sellwood, "cookieFour");
-// addToUl(pearlDistrict, "cookieFive");
+ addToUl(pioneerSquare, "cookie");
+ addToUl(portlandAirport, "cookieTwo");
+ addToUl(washingtonSquare, "cookieThree");
+ addToUl(sellwood, "cookieFour");
+ addToUl(pearlDistrict, "cookieFive");
