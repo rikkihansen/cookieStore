@@ -1,11 +1,12 @@
 // cookie-shop Start
 // Store Objects
-var Stores = function(minCustomer, maxCustomer, avgCookieSale, location,) {
+var Stores = function(minCustomer, maxCustomer, avgCookieSale, location, getElementById) {
    this.minCustomer= minCustomer;
    this.maxCustomer= maxCustomer;
    this.avgCookieSale= avgCookieSale;
    this.location= location;
-   this.customerPerHour = function () {
+   this.getElementById= getElementById;
+   this.customerPerHour = function() {
     return Math.floor(Math.random() * (this.maxCustomer - this. minCustomer) + this.minCustomer);
   }
 };
@@ -15,11 +16,11 @@ var Stores = function(minCustomer, maxCustomer, avgCookieSale, location,) {
 // for (var hoursIndex = 0; index < hours.length; storeIndex++)
 // for (var locationIndex = 0; index <  location.length; locationIndex++)
 
-var pioneerSquare = new Stores(17, 88, 5.2, "Pionner Square");
-var portlandAirport= new Stores(6, 24, 1.2, "Porland Airport");
-var washingtonSquare= new Stores(11, 38, 1.2, "Washington Square");
-var sellwood= new Stores(20, 48, 3.3, "Sellwood");
-var pearlDistrict= new Stores(3, 24, 2.6, "Pearl District");
+var pioneerSquare = new Stores(17, 88, 5.2, "Pionner Square", "cookie");
+var portlandAirport= new Stores(6, 24, 1.2, "Porland Airport", "cookieTwo");
+var washingtonSquare= new Stores(11, 38, 1.2, "Washington Square", "cookieThree");
+var sellwood= new Stores(20, 48, 3.3, "Sellwood", "cookieFour");
+var pearlDistrict= new Stores(3, 24, 2.6, "Pearl District", "cookieFive");
 // var pioneerSquare = {
 //   minCustomer: 17,
 //   maxCustomer: 88,
@@ -103,14 +104,14 @@ function addToUl(shop, elementId) {
 
 
 // calling
-//var stores = [pioneerSquare, washingtonSquare, sellwood];
-for (var placesIndex = 0; index < stores; index++)
+var stores = [pioneerSquare, washingtonSquare, sellwood];
+//for (var places = 0; places < Stores; index++)
 var places = new Array ();
-places.push(new Stores(17, 88, 5.2, "Pionner Square"));
-places.push(new Stores(6, 24, 1.2, "Porland Airport"));
-places.push(new Stores(11, 38, 1.2, "Washington Square"));
-places.push(new Stores(20, 48, 3.3, "Sellwood");
-places.push(new Stores(3, 24, 2.6, "Pearl District"));
+places.push(new Stores(17, 88, 5.2, "Pionner Square", "cookie"));
+places.push(new Stores(6, 24, 1.2, "Porland Airport", "cookieTwo"));
+places.push(new Stores(11, 38, 1.2, "Washington Square", "cookieThree"));
+places.push(new Stores(20, 48, 3.3, "Sellwood", "cookieFour"));
+places.push(new Stores(3, 24, 2.6, "Pearl District", "cookieFive"));
 
 // addToUl(pioneerSquare, "cookie");
 // addToUl(portlandAirport, "cookieTwo");
