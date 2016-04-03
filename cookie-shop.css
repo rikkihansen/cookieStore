@@ -78,3 +78,10 @@ th {
   padding-left: 50px;
   padding-right: 50px;
 }
+.dropdown {
+  display:none;
+
+}
+nav > li:hover .dropdown {
+  display: block;
+}

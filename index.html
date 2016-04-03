@@ -8,51 +8,42 @@
 <body>
   <h1 class="fontOne">Cookie Shop!</h1>
   <nav>
-    <a href="#"> Pioneer Square </a>
-    <a href="#"> Portland Airport </a>
-    <a href="#"> Washigton Square </a>
-    <a href="#"> Sellwood </a>
-    <a href="#"> Pearl District </a>
+    <a href="#">Pioneer Square</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+       </ul>
+    <a href="#">Portland Airport</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+       </ul>
+    <a href="#">Washigton Square</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+       </ul>
+    <a href="#">Sellwood</a>
+      <ul class="dropdown">
+        <li><a href="#">Address</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    <a href="#">Pearl District</a>
+      <ul class="dropdown">
+        <li><a href="#">Address</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
   </nav>
 <section class="tablestuff">
 <table>
-<tbody>
+<tbody id="table">
   <tr id="hour">
     <td> </td>
   </tr>
-  <tr id="cookie">
-    <td>Pioneer Square</td>
-  </tr>
-  <tr id="cookieTwo">
-    <td>Portland Airport</td>
-  </tr>
-  <tr id="cookieThree">
-    <td>Washington Square</td>
-  </tr>
-  <tr id="cookieFour">
-    <td>Sellwood</td>
-  </tr>
-  <tr id="cookieFive">
-    <td>Pearl District</td>
-  </tr>
+
 </tbody>
 </table>
 
-
-<!--  <ul id ="cookie">
-  </ul>
-
-  <ul id="cookieTwo">
-  </ul>
-
-  <ul id="cookieThree">
-  </ul>
-
-  <ul id="cookieFour">
-  </ul>
-
-  <ul id="cookieFive">
-  </ul>-->
 </section>
 <aside>
    <p>
@@ -69,6 +60,27 @@
  marzipan topping fruitcake. Croissant ice cream bear claw jujubes tiramisu halvah bonbon.
  I love chupa chups chocolate cake.
   </p>
+  <h2>
+    Add your cookie information here!
+  </h2>
+  <p>
+    <form action="post">
+      <lable for="locationName">*Location Name:</lable>
+      <input type="text" id="locationName" name:"locationName">
+      <lable for="minnCustomer">*Minimum Cookie Sales:</lebal>
+      <input type="text" id="minnCustomer" name:"minnCustomer">
+      <lable for="maxxCustomer">*Maximum Cookie Sales:</lable>
+      <input type="text" id="maxxCustomer" name:"maxxCustomer">
+      <lable for="avggCookieSale">*Average Cookie Sales:</lable>
+      <input type="text" id="avggCookieSale" name:"avggCookieSale">
+      <input type="button" value="Add Information" onclick="evaluateForm(this.form)">
+    </form>
+    <p>
+
+    </p>
+    <div id="display-area"></div>
+  </p>
+
 </aside>
 <footer>
   <a href="#">About</a>
@@ -77,46 +89,6 @@
   <a href="#">Ingredients</a>
   <img src="coffee.mug.png">
 </footer>
-</body>
-
-
-<!--<table>
-    <th></th>
-    <tr>
-      <td>10AM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>11AM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>12PM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1PM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>2PM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>3PM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>4PM:</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>5pm:</td>
-      <td></td>
-    </tr>
-</table> -->
-
-
 
   <script type="text/javascript" src="cookie-shop.js"></script>
 </body>

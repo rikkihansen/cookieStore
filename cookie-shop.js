@@ -1,22 +1,21 @@
 // cookie-shop Start
 // Store Objects
-var Stores = function(minCustomer, maxCustomer, avgCookieSale, place, getElementId) {
+var Stores = function(minCustomer, maxCustomer, avgCookieSale, place) {
    this.minCustomer= minCustomer;
    this.maxCustomer= maxCustomer;
    this.avgCookieSale= avgCookieSale;
    this.place= place;
-   this.getElementId= getElementId;
    this.customerPerHour = function() {
     return Math.floor(Math.random() * (this.maxCustomer - this. minCustomer) + this.minCustomer);
   }
 };
 
 
-var pioneerSquare = new Stores(17, 88, 5.2, "Pionner Square", "cookie");
-var portlandAirport= new Stores(6, 24, 1.2, "Porland Airport", "cookieTwo");
-var washingtonSquare= new Stores(11, 38, 1.2, "Washington Square", "cookieThree");
-var sellwood= new Stores(20, 48, 3.3, "Sellwood", "cookieFour");
-var pearlDistrict= new Stores(3, 24, 2.6, "Pearl District", "cookieFive");
+var pioneerSquare = new Stores(17, 88, 5.2, "Pionner Square");
+var portlandAirport= new Stores(6, 24, 1.2, "Porland Airport");
+var washingtonSquare= new Stores(11, 38, 1.2, "Washington Square");
+var sellwood= new Stores(20, 48, 3.3, "Sellwood");
+var pearlDistrict= new Stores(3, 24, 2.6, "Pearl District");
 
 // creating a function for the cookieArray using avgCookieSale and a for loop
 function cookiePerHour(store) {
@@ -35,34 +34,74 @@ function addToUl(shop, elementId) {
   var cookieArray = cookiePerHour(shop);
   console.log(cookieArray);
   var sum = 0;
+  var storeData = "<tr><td>" + shop.place + "</td>";
   for (var index = 0; index < cookieArray.length; index++) {
-      listItem.innerHTML += "<td>" +cookieArray[index] +"</td>";
+      storeData += "<td>" + cookieArray[index] +"</td>";
     sum += cookieArray[index];
   }
-  listItem.innerHTML += "<td>" + sum + "</td>";
+  storeData += "<td>" + sum + "</td></tr>";
+  document.getElementById("table").innerHTML += storeData;
 }
 
-var hours=["10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "Total"];
-var loaction=["pioneerSquare", "portlandAirport", "washingtonSquare", "sellwood", "pearlDistrict"];
+var hours=["10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "Total"]; //hour Array
+var loaction=["pioneerSquare", "portlandAirport", "washingtonSquare", "sellwood", "pearlDistrict"]; // loaction Array
 
+//listing hour array
 var listItem = document.getElementById("hour");
     for(var times = 0; times < hours.length; times++){
         var listTable = listItem.innerHTML += "<td>"+ hours[times] + "</td>";
   }
 
 
-// calling
-//var stores = [pioneerSquare, washingtonSquare, sellwood];
-//for (var places = 0; places < Stores; index++)
-var places = new Array ();
-places.push(new Stores(17, 88, 5.2, "Pionner Square", "cookie"));
-places.push(new Stores(6, 24, 1.2, "Porland Airport", "cookieTwo"));
-places.push(new Stores(11, 38, 1.2, "Washington Square", "cookieThree"));
-places.push(new Stores(20, 48, 3.3, "Sellwood", "cookieFour"));
-places.push(new Stores(3, 24, 2.6, "Pearl District", "cookieFive"));
+//forms
+function evaluateForm(submittedForm) {
+  var formIsValid = true;
+  if (submittedForm.locationName.value == "") {
+    alert("Please make sure you fill out all of the required information");
+    formIsValid = false;
+  }
+  if (submittedForm.minnCustomer.value == "") {
+    alert("Please make sure you fill out all of the required information");
+    formIsValid = false;
+  }
+  if (submittedForm.maxxCustomer.value == "") {
+    alert("Please make sure you fill out all of the required information");
+    formIsValid = false;
+  }
+  if (submittedForm.avggCookieSale.value == "") {
+    alert("Please make sure you fill out all of the required information");
+    formIsValid = false;
+  }
+  var locationName = submittedForm.locationName.value;           // taking the value that was put into 'text' field
+  var minnCustomer = parseInt(submittedForm.minnCustomer.value);
+  var maxxCustomer = parseInt(submittedForm.maxxCustomer.value);
+  var avggCookieSale = parseInt(submittedForm.avggCookieSale.value);
+  if (formIsValid){
+    var newStore = new Stores (minnCustomer, maxxCustomer, avggCookieSale, locationName); // made a new location based off of
+    addToUl(newStore); // calling the new store                                       // the information giving in 'text' field
+  }
+}
 
- addToUl(pioneerSquare, "cookie");
- addToUl(portlandAirport, "cookieTwo");
- addToUl(washingtonSquare, "cookieThree");
- addToUl(sellwood, "cookieFour");
- addToUl(pearlDistrict, "cookieFive");
+// function newLocation () {
+//   var locationName = locationName.value;
+//   var minCustomer = minnCustomer.value;
+//   var maxCustomer = maxxCustomer.value;
+//   var avgCookieSale = avggCookieSale.value;
+// };
+
+
+
+
+// calling
+var places = new Array ();
+places.push(new Stores(17, 88, 5.2, "Pionner Square"));
+places.push(new Stores(6, 24, 1.2, "Porland Airport"));
+places.push(new Stores(11, 38, 1.2, "Washington Square"));
+places.push(new Stores(20, 48, 3.3, "Sellwood"));
+places.push(new Stores(3, 24, 2.6, "Pearl District"));
+
+ addToUl(pioneerSquare);
+ addToUl(portlandAirport);
+ addToUl(washingtonSquare);
+ addToUl(sellwood);
+ addToUl(pearlDistrict);
