@@ -41,6 +41,11 @@ footer a {
   padding: 10px;
   Margin: 50px;
 }
+footer {
+  background-image: url("coffee.mug.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 a:hover {
   font-weight: bold;
   color: white;
@@ -54,6 +59,7 @@ table {
 
 .tablestuff {
   padding-top:50px;
+
 }
 tr {
   border: solid black 5px;

@@ -36,14 +36,7 @@ function addToUl(shop, elementId) {
   console.log(cookieArray);
   var sum = 0;
   for (var index = 0; index < cookieArray.length; index++) {
-    if (index+10 > 12) {
-      listItem.innerHTML += "<td>" + (index-2)+cookieArray[index] +"</td>";
-    } else if (index+10 == 12){
       listItem.innerHTML += "<td>" +cookieArray[index] +"</td>";
-    }
-    else {
-      listItem.innerHTML += "<td>" + (index+10) +cookieArray[index] +"</td>";
-    }
     sum += cookieArray[index];
   }
   listItem.innerHTML += "<td>" + sum + "</td>";
