@@ -9,11 +9,11 @@ body {
   text-align: center;
   font-size: 50px;
 }
-ul {
+/* ul {
   display: inline-block;
   list-style-type: none;
   margin: 60px;
-}
+} */
 nav {
   display: inline-block;
   vertical-align: top;
@@ -49,12 +49,26 @@ a:hover {
 
 table {
   border: solid black 5px;
-  width: 100%;
+  margin: 0px auto;
 }
-th, td, tr {
+
+.tablestuff {
+  padding-top:50px;
+}
+tr {
   border: solid black 5px;
-  padding: 10px, 10px, 10px, 10px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+td {
+  border: solid black 5px;
+  width: 60px;
+  margin: 20px;
 }
 th {
   width: 100%;
+  border: black solid;
+  padding-left: 50px;
+  padding-right: 50px;
 }

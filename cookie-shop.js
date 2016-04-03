@@ -37,16 +37,16 @@ function addToUl(shop, elementId) {
   var sum = 0;
   for (var index = 0; index < cookieArray.length; index++) {
     if (index+10 > 12) {
-      listItem.innerHTML += "<tr>" + (index-2)+cookieArray[index] +"</tr>";
+      listItem.innerHTML += "<td>" + (index-2)+cookieArray[index] +"</td>";
     } else if (index+10 == 12){
-      listItem.innerHTML += "<tr>" +cookieArray[index] +"</tr>";
+      listItem.innerHTML += "<td>" +cookieArray[index] +"</td>";
     }
     else {
-      listItem.innerHTML += "<tr>" + (index+10) +cookieArray[index] +"</tr>";
+      listItem.innerHTML += "<td>" + (index+10) +cookieArray[index] +"</td>";
     }
     sum += cookieArray[index];
   }
-  listItem.innerHTML += "<tr>" + sum + "</tr>";
+  listItem.innerHTML += "<td>" + sum + "</td>";
 }
 
 var hours=["10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "Total"];
@@ -54,7 +54,7 @@ var loaction=["pioneerSquare", "portlandAirport", "washingtonSquare", "sellwood"
 
 var listItem = document.getElementById("hour");
     for(var times = 0; times < hours.length; times++){
-        var listTable = listItem.innerHTML += "<th>"+ hours[times] + "</th>";
+        var listTable = listItem.innerHTML += "<td>"+ hours[times] + "</td>";
   }
 
 
