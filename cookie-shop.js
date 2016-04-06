@@ -92,7 +92,7 @@ function evaluateForm(submittedForm) {
 
 
 
-// calling
+// new Array
 var places = new Array ();
 places.push(new Stores(17, 88, 5.2, "Pionner Square"));
 places.push(new Stores(6, 24, 1.2, "Porland Airport"));
@@ -100,6 +100,7 @@ places.push(new Stores(11, 38, 1.2, "Washington Square"));
 places.push(new Stores(20, 48, 3.3, "Sellwood"));
 places.push(new Stores(3, 24, 2.6, "Pearl District"));
 
+//Calling stores
  addToUl(pioneerSquare);
  addToUl(portlandAirport);
  addToUl(washingtonSquare);

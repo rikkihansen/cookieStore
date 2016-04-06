@@ -23,7 +23,6 @@ nav a {
   color: #845669;
   margin: 22px;
   padding: 10px;
-  display: inline;
 }
 aside p {
   border: 0px;
@@ -80,7 +79,11 @@ th {
 }
 li:hover .dropdown {
    display: block;
+ }
+nav ul {
+  display: flex;
+  list-style-type: none;
 }
-ul li {
-  display: inline-block;
+nav li {
+
 }
