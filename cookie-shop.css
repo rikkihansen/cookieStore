@@ -9,11 +9,7 @@ body {
   text-align: center;
   font-size: 50px;
 }
-/* ul {
-  display: inline-block;
-  list-style-type: none;
-  margin: 60px;
-} */
+
 nav {
   display: inline-block;
   vertical-align: top;
@@ -27,6 +23,7 @@ nav a {
   color: #845669;
   margin: 22px;
   padding: 10px;
+  display: inline;
 }
 aside p {
   border: 0px;
@@ -39,7 +36,7 @@ footer a {
   color: #845669;
   margin: 10px;
   padding: 10px;
-  Margin: 50px;
+  margin: 50px;
 }
 footer {
   background-image: url("coffee.mug.png");
@@ -79,9 +76,11 @@ th {
   padding-right: 50px;
 }
 .dropdown {
-  display:none;
-
+  display: none;
 }
-nav > li:hover .dropdown {
-  display: block;
+li:hover .dropdown {
+   display: block;
+}
+ul li {
+  display: inline-block;
 }
