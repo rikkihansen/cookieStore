@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <head>
-<div class="center">
   <title>Cookie Shop</title>
-</div>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="cookie-shop.css">
-
 </head>
+
 <body>
-
   <h1 class="fontOne">Cookie Shop!</h1>
-  <ul id ="cookie">- Pionner Square -
+  <nav>
+  <ul class="list">
+    <li><a href="#">Pioneer Square</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+         <li><a href="#">Cookies</a></li>
+       </ul>
+    </li>
+    <li><a href="#">Portland Airport</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+         <li><a href="#">Cookies</a></li>
+
+       </ul>
+     </li>
+    <li><a href="#">Washigton Square</a>
+       <ul class="dropdown">
+         <li><a href="#">Address</a></li>
+         <li><a href="#">Contact</a></li>
+         <li><a href="#">Cookies</a></li>
+
+       </ul>
+    </li>
+    <li><a href="#">Sellwood</a>
+      <ul class="dropdown">
+        <li><a href="#">Address</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cookies</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#">Pearl District</a>
+      <ul class="dropdown">
+        <li><a href="#">Address</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cookies</a></li>
+
+      </ul>
+    </li>
   </ul>
+  </nav>
+<section class="tablestuff">
+<table>
+<tbody id="table">
+  <tr id="hour">
+    <td> </td>
+  </tr>
 
-  <ul id="cookieTwo">- Portland Airport -
-  </ul>
+</tbody>
+</table>
 
-  <ul id="cookieThree">- Washington Square -
-  </ul>
-
-  <ul id="cookieFour">- Sellwood -
-  </ul>
-
-  <ul id="cookieFive">- Pearl District -
-  </ul>
-
-
+<<<<<<< HEAD
 <!--<table>
   <thead>
     <tr>
@@ -36,7 +71,53 @@
 </tbody>
 </table> -->
 
+=======
+</section>
+<aside>
+   <p>
+     Wafer gingerbread fruitcake I love cake. Lemon drops liquorice chocolate cake jujubes
+     lollipop danish gummies I love. Lollipop tootsie roll pie I love. Donut tart lollipop marzipan
+     halvah muffin cupcake marshmallow.<br>
+ Chocolate bar gingerbread chocolate cake sesame snaps halvah chocolate pudding gummies halvah. Danish
+ cake croissant. Liquorice ice cream jelly-o danish biscuit donut candy sesame snaps. I love jelly-o
+ sweet tiramisu chupa chups gingerbread.<br>
+ Ice cream bonbon cupcake biscuit topping oat cake. Pastry wafer cheesecake. Sesame snaps pudding
+ I love chocolate bar sesame snaps marzipan cupcake caramels. Pastry cotton candy sesame snaps cheesecake dessert donut.
+ Cake oat cake I love. Cake fruitcake gingerbread powder lollipop toffee marzipan pudding pastry. <br>
+ Chupa chups topping danish ice cream gummies I love chocolate bar I love. I love gummi bears cake pastry muffin.
+ marzipan topping fruitcake. Croissant ice cream bear claw jujubes tiramisu halvah bonbon.
+ I love chupa chups chocolate cake.
+  </p>
+  <h2>
+    Add your cookie information here!
+  </h2>
+  <p>
+    <form action="post">
+      <lable for="locationName">*Location Name:</lable>
+      <input type="text" id="locationName" name:"locationName">
+      <lable for="minnCustomer">*Minimum Cookie Sales:</lebal>
+      <input type="text" id="minnCustomer" name:"minnCustomer">
+      <lable for="maxxCustomer">*Maximum Cookie Sales:</lable>
+      <input type="text" id="maxxCustomer" name:"maxxCustomer">
+      <lable for="avggCookieSale">*Average Cookie Sales:</lable>
+      <input type="text" id="avggCookieSale" name:"avggCookieSale">
+      <input type="button" value="Add Information" onclick="evaluateForm(this.form)">
+    </form>
+    <p>
+      - All * information is required -
+    </p>
+    <div id="display-area"></div>
+  </p>
+>>>>>>> master
 
+</aside>
+<footer>
+  <a href="#">About</a>
+  <a href="#">Contact us</a>
+  <a href="#">Carrers</a>
+  <a href="#">Ingredients</a>
+  <img src="coffee.mug.png">
+</footer>
 
   <script type="text/javascript" src="cookie-shop.js"></script>
 </body>

@@ -1,10 +1,89 @@
+/* {border: solid black 5px;}*/
 body {
   font-family: Open Sans, Helvetica, sans-serif;
-  background-color: #283746;
+  background-color: #223746;
   color: white;
-
 }
 .fontOne {
   color: #467582;
   text-align: center;
+  font-size: 50px;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+
+}
+nav a {
+  font-weight: bold;
+  font-family: monospace, sans-serif;
+  font-size: 25px;
+  color: #845669;
+  margin: 22px;
+  padding: 10px;
+}
+aside p {
+  border: 0px;
+  margin: 40px;
+}
+footer a {
+  width: 100%;
+  font-family: monospace, sans-serif;
+  font-size: 18px;
+  color: #845669;
+  margin: 10px;
+  padding: 10px;
+  margin: 50px;
+}
+footer {
+  background-image: url("coffee.mug.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+a:hover {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+}
+
+table {
+  border: solid black 5px;
+  margin: 0px auto;
+}
+
+.tablestuff {
+  padding-top:50px;
+
+}
+tr {
+  border: solid black 5px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+td {
+  border: solid black 5px;
+  width: 60px;
+  margin: 20px;
+}
+th {
+  width: 100%;
+  border: black solid;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.dropdown {
+  display: none;
+}
+li:hover .dropdown {
+   display: block;
+ }
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav li {
+
 }

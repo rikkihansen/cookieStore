@@ -19,3 +19,14 @@ Cookie Store!!
  I made the styleguide for my page, but I am not totally sure if I have it done correctly..
 
  This assignment was definitely hard for me.
+
+ March 27, 2016
+
+  I worked on my styleguide and made a lot of design changes to make it look better and make it more readable.
+  I really liked this assignment because I really like making things look nice and it was fun messing around with
+  the margins, widths, and sizings and watch how it all effects the look of the page.
+
+
+April 3, 2016
+
+     Today was another hard one.. 
